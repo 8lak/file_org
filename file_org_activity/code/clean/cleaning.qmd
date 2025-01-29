@@ -54,6 +54,8 @@ Practicing your keyboard shortcuts. Try out the following as you work on this ex
 
 # Implementation
 
+hi
+
 ```{r}
 
 ```
