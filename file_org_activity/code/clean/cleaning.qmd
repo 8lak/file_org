@@ -12,6 +12,27 @@ title: "Cleaning SFO weather data"
 5. Save your wrangled data to the `data/clean/` folder using `write_csv()`. Name this file `weather_clean.csv`. Look up the documentation for this function by entering `?write_csv` in the Console. You'll need to write an appropriate relative path.
 
 
+```{r}
+print('bruh')
+```
+
+
+```{r}
+getwd()
+weather <- read.csv('../../data/raw/weather.csv')
+```
+
+```{r}
+weather_2 <- weather %>% 
+  mutate(PrecipYr = na_if(PrecipYr, 99999))
+```
+
+```{r}
+weather_2<-weather_2 %>% 
+mutate(dateInYear=yday(as_date(date)))
+```
+
+
 Notes that may help for the data wrangling:
 
 - `month.abb` is a built-in object in R with 3-letter month abbreviations
